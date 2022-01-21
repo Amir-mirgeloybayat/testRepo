@@ -3,7 +3,6 @@ name: CI
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
     container: openjdk
@@ -11,7 +10,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: Build Project
-      - run: javac -cp "junit-4.10.jar:." *.java
+        run: javac -cp "junit-4.10.jar:." *.java
 
   calcadd:
     runs-on: ubuntu-latest
